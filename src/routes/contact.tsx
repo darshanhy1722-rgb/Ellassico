@@ -76,7 +76,7 @@ function ContactPage() {
             <Field label="Name" name="name" required />
             <Field label="Email" name="email" type="email" required />
             <Field label="Phone" name="phone" type="tel" />
-            <Field label="Budget (USD)" name="budget" placeholder="e.g. $5,000 — $15,000" />
+            <Field label="Budget (INR)" name="budget" placeholder="e.g. ₹50,000 — ₹2,00,000" />
             <div className="md:col-span-2">
               <Field label="Project Details" name="details" textarea required />
             </div>
