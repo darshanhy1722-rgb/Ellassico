@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import { SITE_URL } from "../lib/site";
+import { SITE_URL, PHONE_TEL, SOCIAL_LINKS } from "../lib/site";
 
 function NotFoundComponent() {
   return (
@@ -112,6 +112,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             name: "ElClassico Designs™",
             url: `${SITE_URL}/`,
             logo: `${SITE_URL}/elclassico-logo.jpg`,
+            telephone: PHONE_TEL,
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "ITC Back Gate, 15/1, Jeevanahalli Main Rd, opp. Cox Town, Jeevanhalli",
+              addressLocality: "Bengaluru",
+              addressRegion: "Karnataka",
+              postalCode: "560005",
+              addressCountry: "IN",
+            },
+            sameAs: SOCIAL_LINKS.map((s) => s.href),
           },
         ]),
       },

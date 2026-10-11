@@ -1,5 +1,5 @@
 // Update this number to change the WhatsApp destination site-wide.
-export const WHATSAPP_NUMBER = "1234567890";
+export const WHATSAPP_NUMBER = "918884488949";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello ElClassico Designs — I'd like to discuss a custom piece.")}`;
 
 export function WhatsAppFab() {

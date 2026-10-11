@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { WhatsAppFab, WHATSAPP_URL } from "@/components/whatsapp-fab";
+import { ADDRESS_LINES, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS } from "@/lib/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -40,12 +41,27 @@ function ContactPage() {
           <aside className="space-y-10 lg:col-span-1">
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Studio</h3>
-              <p className="text-sm text-foreground leading-relaxed">ElClassico Atelier<br />By appointment only</p>
+              <address className="not-italic text-sm text-foreground leading-relaxed">
+                ElClassico Designs™ Studio
+                {ADDRESS_LINES.map((line) => (
+                  <span key={line} className="block text-muted">{line}</span>
+                ))}
+              </address>
+              <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-sm hover:text-accent">Get directions →</a>
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Direct</h3>
               <p className="text-sm text-foreground"><a href="mailto:studio@elclassico.co" className="hover:text-accent">studio@elclassico.co</a></p>
+              <p className="text-sm text-foreground mt-1"><a href={`tel:${PHONE_TEL}`} className="hover:text-accent">{PHONE_DISPLAY}</a></p>
               <p className="text-sm text-foreground mt-1"><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp studio →</a></p>
+            </div>
+            <div>
+              <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Follow</h3>
+              <ul className="space-y-1 text-sm text-foreground">
+                {SOCIAL_LINKS.map((s) => (
+                  <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent">{s.label}</a></li>
+                ))}
+              </ul>
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Lead Time</h3>

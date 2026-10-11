@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/brand-logo";
+import { ADDRESS_LINES, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, SOCIAL_LINKS } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -10,9 +11,14 @@ export function SiteFooter() {
           <p className="text-muted text-sm leading-relaxed">
             Crafted with passion. Finished with perfection. Luxury resin artistry for the modern aesthete — commissioned worldwide.
           </p>
-          <div className="mt-8 font-mono text-[10px] uppercase tracking-widest text-muted">
-            Studio · By appointment only
-          </div>
+          <address className="mt-8 not-italic text-sm text-muted leading-relaxed">
+            <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+              {ADDRESS_LINES.map((line) => (
+                <span key={line} className="block">{line}</span>
+              ))}
+            </a>
+            <a href={`tel:${PHONE_TEL}`} className="block mt-3 text-foreground font-medium hover:text-accent transition-colors">{PHONE_DISPLAY}</a>
+          </address>
         </div>
 
         <div>
@@ -28,9 +34,10 @@ export function SiteFooter() {
         <div>
           <h5 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-6">Connect</h5>
           <ul className="space-y-4 text-xs font-medium uppercase tracking-wider">
-            <li><a href="#" className="hover:text-accent transition-colors">Instagram</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors">Pinterest</a></li>
-            <li><a href="#" className="hover:text-accent transition-colors">Facebook</a></li>
+            {SOCIAL_LINKS.map((s) => (
+              <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">{s.label}</a></li>
+            ))}
+            <li><a href={`tel:${PHONE_TEL}`} className="hover:text-accent transition-colors">Call Us</a></li>
             <li><a href="mailto:studio@elclassico.co" className="hover:text-accent transition-colors">Email</a></li>
           </ul>
         </div>
