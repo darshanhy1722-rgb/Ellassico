@@ -16,15 +16,15 @@ const stats = [
   { label: "Total Orders", value: "128", delta: "+12 this month", tone: "text-accent" },
   { label: "Pending", value: "14", delta: "3 awaiting approval", tone: "text-gold" },
   { label: "Completed", value: "114", delta: "98% on-time", tone: "text-accent" },
-  { label: "Revenue MTD", value: "$82.4k", delta: "+18% vs last", tone: "text-accent" },
+  { label: "Revenue MTD", value: "₹6.8L", delta: "+18% vs last", tone: "text-accent" },
 ];
 
 const enquiries = [
-  { name: "Sofia Almeida", type: "River Table", budget: "$8k", status: "New" },
-  { name: "Hiroshi Tanaka", type: "Wall Panel", budget: "$3.2k", status: "Quoted" },
-  { name: "Elena Petrov", type: "Coffee Table", budget: "$5.5k", status: "In Design" },
-  { name: "Marcus Klein", type: "Corporate Gift x50", budget: "$12k", status: "Crafting" },
-  { name: "Aisha Malik", type: "Wedding Board", budget: "$1.4k", status: "Delivered" },
+  { name: "Sofia Almeida", type: "River Table", budget: "₹6.5L", status: "New" },
+  { name: "Hiroshi Tanaka", type: "Wall Panel", budget: "₹2.6L", status: "Quoted" },
+  { name: "Elena Petrov", type: "Coffee Table", budget: "₹4.5L", status: "In Design" },
+  { name: "Marcus Klein", type: "Corporate Gift x50", budget: "₹10L", status: "Crafting" },
+  { name: "Aisha Malik", type: "Wedding Board", budget: "₹1.2L", status: "Delivered" },
 ];
 
 const chart = [42, 55, 48, 62, 71, 65, 78, 82, 74, 88, 92, 84];
