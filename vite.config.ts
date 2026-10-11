@@ -6,7 +6,13 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// Railway runs the app as a long-lived Node server, so build for Node there instead of the
+// default Cloudflare worker. Lovable's own builds pin their preset and are unaffected.
+const isRailway = Object.keys(process.env).some((key) => key.startsWith("RAILWAY_"));
+const nitroPreset = process.env.NITRO_PRESET || (isRailway ? "node-server" : undefined);
+
 export default defineConfig({
+  ...(nitroPreset ? { nitro: { preset: nitroPreset } } : {}),
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
