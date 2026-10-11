@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
+import { BrandLogo } from "@/components/brand-logo";
 
 export function SiteFooter() {
   return (
     <footer className="py-20 px-6 border-t border-foreground/5 bg-background">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2 max-w-sm">
-          <div className="text-2xl font-black uppercase tracking-tighter mb-4">Elclassico</div>
+          <div className="text-2xl font-black uppercase tracking-tighter mb-4"><BrandLogo markClassName="h-12 w-12" /></div>
           <p className="text-muted text-sm leading-relaxed">
             Crafted with passion. Finished with perfection. Luxury resin artistry for the modern aesthete — commissioned worldwide.
           </p>
@@ -36,7 +37,7 @@ export function SiteFooter() {
       </div>
 
       <div className="max-w-[1400px] mx-auto mt-16 pt-8 border-t border-foreground/5 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="text-[10px] text-muted font-mono uppercase tracking-widest">© {new Date().getFullYear()} Elclassico Designs — Bespoke Artistry</div>
+        <div className="text-[10px] text-muted font-mono uppercase tracking-widest">© {new Date().getFullYear()} ElClassico Designs™ — Bespoke Artistry</div>
         <div className="text-[10px] text-muted font-mono uppercase tracking-widest">Made in Limited Editions</div>
       </div>
     </footer>

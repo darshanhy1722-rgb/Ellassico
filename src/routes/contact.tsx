@@ -7,9 +7,9 @@ import { WhatsAppFab, WHATSAPP_URL } from "@/components/whatsapp-fab";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Elclassico Designs" },
-      { name: "description", content: "Commission a bespoke resin piece. Share your project details with the Elclassico studio and receive a personalised quote." },
-      { property: "og:title", content: "Contact Elclassico Designs" },
+      { title: "Contact — ElClassico Designs™" },
+      { name: "description", content: "Commission a bespoke resin piece. Share your project details with the ElClassico Designs™ studio and receive a personalised quote." },
+      { property: "og:title", content: "Contact ElClassico Designs™" },
       { property: "og:description", content: "Commission a bespoke resin piece — share your project with our studio." },
     ],
   }),
@@ -40,7 +40,7 @@ function ContactPage() {
           <aside className="space-y-10 lg:col-span-1">
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Studio</h3>
-              <p className="text-sm text-foreground leading-relaxed">Elclassico Atelier<br />By appointment only</p>
+              <p className="text-sm text-foreground leading-relaxed">ElClassico Atelier<br />By appointment only</p>
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Direct</h3>

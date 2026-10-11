@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { BrandLogo } from "@/components/brand-logo";
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,8 +23,8 @@ export function SiteNav() {
       ].join(" ")}
     >
       <div className="max-w-[1400px] mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className={["text-lg font-extrabold tracking-tighter uppercase transition-colors", scrolled ? "text-foreground" : "text-white"].join(" ")}>
-          Elclassico
+        <Link to="/" aria-label="ElClassico Designs™ — Home" className={["text-lg font-extrabold tracking-tighter uppercase transition-colors", scrolled ? "text-foreground" : "text-white"].join(" ")}>
+          <BrandLogo />
         </Link>
 
         <div className={["hidden md:flex gap-9 text-[11px] font-medium uppercase tracking-[0.2em] transition-colors", scrolled ? "text-foreground/60" : "text-white/70"].join(" ")}>

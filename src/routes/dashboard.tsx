@@ -1,10 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { BrandLogo } from "@/components/brand-logo";
 
 export const Route = createFileRoute("/dashboard")({
   head: () => ({
     meta: [
-      { title: "Studio Dashboard — Elclassico" },
-      { name: "description", content: "Internal atelier dashboard for Elclassico commissions, gallery and enquiries." },
+      { title: "Studio Dashboard — ElClassico Designs™" },
+      { name: "description", content: "Internal atelier dashboard for ElClassico Designs™ commissions, gallery and enquiries." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -34,7 +35,7 @@ function Dashboard() {
       {/* Top bar */}
       <header className="border-b border-white/5 px-6 h-16 flex items-center justify-between sticky top-0 bg-[#0d0d0d]/80 backdrop-blur-xl z-40">
         <div className="flex items-center gap-8">
-          <Link to="/" className="text-lg font-extrabold uppercase tracking-tighter">Elclassico</Link>
+          <Link to="/" aria-label="ElClassico Designs™ — Home" className="text-lg font-extrabold uppercase tracking-tighter"><BrandLogo markClassName="h-8 w-8" /></Link>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/40">Studio Dashboard</span>
         </div>
         <div className="flex items-center gap-4">
