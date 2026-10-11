@@ -38,7 +38,7 @@ export function SiteFooter() {
               <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">{s.label}</a></li>
             ))}
             <li><a href={`tel:${PHONE_TEL}`} className="hover:text-accent transition-colors">Call Us</a></li>
-            <li><a href="mailto:studio@elclassico.co" className="hover:text-accent transition-colors">Email</a></li>
+            <li><a href="mailto:elclassicodesigns@gmail.com" className="hover:text-accent transition-colors">Email</a></li>
           </ul>
         </div>
       </div>

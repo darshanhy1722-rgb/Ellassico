@@ -113,6 +113,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             url: `${SITE_URL}/`,
             logo: `${SITE_URL}/elclassico-logo.jpg`,
             telephone: PHONE_TEL,
+            email: "elclassicodesigns@gmail.com",
             address: {
               "@type": "PostalAddress",
               streetAddress: "ITC Back Gate, 15/1, Jeevanahalli Main Rd, opp. Cox Town, Jeevanhalli",

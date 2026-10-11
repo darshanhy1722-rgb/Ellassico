@@ -51,7 +51,7 @@ function ContactPage() {
             </div>
             <div>
               <h3 className="text-[10px] font-bold uppercase tracking-widest text-foreground/40 mb-4">Direct</h3>
-              <p className="text-sm text-foreground"><a href="mailto:studio@elclassico.co" className="hover:text-accent">studio@elclassico.co</a></p>
+              <p className="text-sm text-foreground"><a href="mailto:elclassicodesigns@gmail.com" className="hover:text-accent">elclassicodesigns@gmail.com</a></p>
               <p className="text-sm text-foreground mt-1"><a href={`tel:${PHONE_TEL}`} className="hover:text-accent">{PHONE_DISPLAY}</a></p>
               <p className="text-sm text-foreground mt-1"><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-accent">WhatsApp studio →</a></p>
             </div>
