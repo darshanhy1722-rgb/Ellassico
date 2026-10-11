@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SITE_URL, PHONE_TEL, SOCIAL_LINKS } from "../lib/site";
 
 function NotFoundComponent() {
   return (
@@ -69,22 +70,61 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Elclassico Designs — Luxury Handcrafted Resin Art" },
+      { title: "ElClassico Designs™ — Luxury Handcrafted Resin Art" },
       { name: "description", content: "Bespoke resin river tables, wall art and objects for luxury interiors. Every piece one of one — crafted with passion, finished with perfection." },
-      { name: "author", content: "Elclassico Designs" },
-      { property: "og:title", content: "Elclassico Designs — Luxury Handcrafted Resin Art" },
+      { name: "author", content: "ElClassico Designs™" },
+      { name: "application-name", content: "ElClassico Designs™" },
+      { name: "apple-mobile-web-app-title", content: "ElClassico Designs™" },
+      { name: "theme-color", content: "#eed6b7" },
+      { property: "og:site_name", content: "ElClassico Designs™" },
+      { property: "og:title", content: "ElClassico Designs™ — Luxury Handcrafted Resin Art" },
+      { property: "og:image", content: `${SITE_URL}/elclassico-logo.jpg` },
       { property: "og:description", content: "Bespoke resin river tables, wall art and objects for luxury interiors." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/favicon.ico", sizes: "48x48" },
+      { rel: "icon", href: "/favicon-96.png", type: "image/png", sizes: "96x96" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify([
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "ElClassico Designs™",
+            alternateName: ["ElClassico Designs", "Elclassico"],
+            url: `${SITE_URL}/`,
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "ElClassico Designs™",
+            url: `${SITE_URL}/`,
+            logo: `${SITE_URL}/elclassico-logo.jpg`,
+            telephone: PHONE_TEL,
+            email: "elclassicodesigns@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "ITC Back Gate, 15/1, Jeevanahalli Main Rd, opp. Cox Town, Jeevanhalli",
+              addressLocality: "Bengaluru",
+              addressRegion: "Karnataka",
+              postalCode: "560005",
+              addressCountry: "IN",
+            },
+            sameAs: SOCIAL_LINKS.map((s) => s.href),
+          },
+        ]),
       },
     ],
   }),

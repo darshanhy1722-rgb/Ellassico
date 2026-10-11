@@ -19,10 +19,10 @@ import heroTable from "@/assets/hero-table.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Elclassico Designs" },
-      { name: "description", content: "A curated archive of Elclassico resin commissions — river tables, wall panels, coffee tables, and bespoke objects for luxury interiors." },
-      { property: "og:title", content: "Gallery — Elclassico Designs" },
-      { property: "og:description", content: "A curated archive of bespoke resin commissions from the Elclassico atelier." },
+      { title: "Gallery — ElClassico Designs™" },
+      { name: "description", content: "A curated archive of ElClassico Designs™ resin commissions — river tables, wall panels, coffee tables, and bespoke objects for luxury interiors." },
+      { property: "og:title", content: "Gallery — ElClassico Designs™" },
+      { property: "og:description", content: "A curated archive of bespoke resin commissions from the ElClassico Designs™ atelier." },
       { property: "og:image", content: galCoffee },
       { name: "twitter:image", content: galCoffee },
     ],

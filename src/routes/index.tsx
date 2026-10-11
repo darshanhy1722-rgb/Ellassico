@@ -21,9 +21,9 @@ import galGeode from "@/assets/gal-geode.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Elclassico Designs — Luxury Handcrafted Resin Art" },
+      { title: "ElClassico Designs™ — Luxury Handcrafted Resin Art" },
       { name: "description", content: "Handcrafted resin river tables, wall art, clocks and objects. Every piece is one of one, designed for modern homes and luxury interiors." },
-      { property: "og:title", content: "Elclassico Designs — Luxury Handcrafted Resin Art" },
+      { property: "og:title", content: "ElClassico Designs™ — Luxury Handcrafted Resin Art" },
       { property: "og:description", content: "Handcrafted masterpieces designed exclusively for modern homes, high-end offices, and bespoke lifestyles." },
       { property: "og:image", content: heroTable },
       { name: "twitter:image", content: heroTable },
@@ -140,7 +140,7 @@ function Home() {
               Every Piece is<br />One of One.
             </h2>
             <p className="text-background/60 text-lg leading-relaxed mb-6 max-w-md">
-              At Elclassico Designs, we believe true luxury cannot be replicated. Each pour is a unique dance between chemistry and wood grain — a masterpiece that exists nowhere else on Earth.
+              At ElClassico Designs™, we believe true luxury cannot be replicated. Each pour is a unique dance between chemistry and wood grain — a masterpiece that exists nowhere else on Earth.
             </p>
             <p className="text-background/50 text-sm leading-relaxed mb-10 max-w-md">
               From the selection of a live-edge slab to the final polish, every stage is executed by hand in our atelier. We do not mass produce.
@@ -167,7 +167,7 @@ function Home() {
         <div className="max-w-[1400px] mx-auto">
           <div className="mb-16 max-w-2xl">
             <span className="font-mono text-xs uppercase tracking-widest text-muted">02 / The Standard</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mt-3 uppercase">Why Elclassico</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tighter mt-3 uppercase">Why ElClassico</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-foreground/10">
             {whyChoose.map((w, i) => (
